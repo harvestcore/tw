@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Ángel Gómez Martín">    
+    <title id="titulo">El Lector de Libros</title>
+    <link rel="icon" href="img/open-book.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+</head>
+<body>
+    <header id="cabecera">
+        <img src="./img/book.png" alt="Libro" id="libro-cabecera">
+        <div id="cabecera-titulo">
+            <h1>El Lector de Libros</h1>
+            <h2>Contando historias desde hace 150 años.</h2>
+        </div>
+    </header>
+
+    <nav class="top-menu">
+        <a href="./index.html">Inicio</a>
+        <a href="./catalogo.html">Catálogo</a>
+        <a href="./busqueda.html">Búsqueda</a>
+        <a href="./tiendas.html">Tiendas</a>
+        <a href="./pedidos.html">Pedidos</a>
+    </nav>
+
+    <main class="container">
+        <aside class="side-menu">
+            <section class="mas-vendidos">
+                <h3>Más vendidos</h3>
+                <ul>
+                    <li><a href="">El quijote</a></li>
+                    <li><a href="">Ulises</a></li>
+                    <li><a href="">La cocina de Arguiñano</a></li>
+                </ul>
+            </section>
+
+            <section class="mas-populares">
+                <h3>Más populares</h3>
+                <ul>
+                    <li><a href="">Charles Dickens</a></li>
+                    <li><a href="">Julio Verne</a></li>
+                    <li><a href="">Edgar Allan Poe</a></li>
+                </ul>
+            </section>
+        </aside>
+
+        <div class="pedidos">
+            <h2>Pedidos</h2>
+            <section class="cabecera-libro-ped">
+                <h3>Pedido actual:</h3>
+                <img class="img-libro-ped" src="./img/principe.jpg" alt="El príncipe de la niebla">
+                <div class=items-ped>
+                    <div class="single-item-ped">
+                        <span class="tit-libro-ped caract-libro">Título</span>
+                        <span class="cont-tit-libro">El príncipe de la niebla</span>
+                    </div>
+                    <div class="single-item-ped">
+                        <span class="aut-libro-ped caract-libro">Autor</span>
+                        <span class="cont-aut-libro">Carlos Ruiz Zafón</span>
+                    </div>
+                    <div class="single-item-ped">
+                        <span class="edi-libro-ped caract-libro">Editorial</span>
+                        <span class="cont-edi-libro">Booket</span>
+                    </div>
+                    <div class="single-item-ped">
+                        <span class="isbn-libro-ped caract-libro">ISBN</span>
+                        <span class="cont-isbn-libro">9788466423280</span>
+                    </div>
+                    <div class="single-item-ped">
+                        <span class="anno-libro-ped caract-libro">Año</span>
+                        <span class="cont-anno-libro">1993</span>
+                    </div>
+                    <div class="single-item-ped">
+                        <span class="desc-libro-ped caract-libro">Sinopsis</span>
+                        <span class="cont-desc-libro">El príncipe de la niebla es una novela juvenil de Carlos Ruiz Zafón publicada el año 1993. La trama transcurre en 1943, en un pueblo a las orillas del Atlántico, durante la segunda guerra mundial. Fue catalogada como una de las mejores novelas juveniles de Carlos Ruiz Zafón. Ha obtenido varios premios de literatura con otras novelas como La sombra del viento, Marina, El palacio de la medianoche, entre otras.</span>
+                    </div>
+                    <div class="single-item-ped">
+                        <span class="prec-libro-ped caract-libro">Precio</span>
+                        <span class="cont-prec-libro">24,99€</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="form-pedido">
+                <form action="./validar.php" method="POST" target="_blank">
+                    <div class="items-pedido">
+                        <div class="f-param">
+                            <label for="pf-nom-ape" class="nom-ape-ped">Nombre y apellidos</label>
+                            <input type="text" name="nom-ape" id="pf-nom-ape">
+                        </div>
+                        
+                        <div class="f-param">
+                            <label for="pf-direccion" class="dir-ped">Dirección</label>
+                            <input type="text" name="direccion" id="pf-direccion">
+                        </div>
+                        
+                        <div class="f-param">
+                            <label for="pf-email" class="email-ped">Email</label>
+                            <input type="email" name="email" id="pf-email">
+                        </div>
+                        
+                        <div class="f-param">
+                            <label for="pf-ntarjeta" class="ntarj-ped">Número de tarjeta</label>
+                            <input type="text" name="ntarjeta" id="pf-ntarjeta">
+                        </div>
+                        
+                        <div class="f-param">
+                            <label for="pf-fechacad" class="fechacad-ped">Fecha de caducidad</label>
+                            <input type="date" name="fechacad" id="pf-fechacad">
+                        </div>
+                        
+                        <div class="f-param">
+                            <label for="pf-cvc" class="cvc-ped">CVC</label>
+                            <input type="number" name="CVC" id="pf-cvc">
+                        </div>
+                        
+                        <div class="f-param">
+                            <input type="hidden" name="isbn-ped" value="9788466423280">
+                        </div>
+                        
+                        <div class="f-param">
+                            <div class="misc-ped">
+                                <span class="misc-txt">Marque si procede:</span>
+                                <span><input type="checkbox" name="condic-ped" required>He leído y acepto las condiciones de compra.</span>
+                                <span><input type="checkbox" name="info-ped">Deseo recibir información sobre novedades.</span>
+                                <span><input type="checkbox" name="regalo-ped">Deseo el envío envuelto para regalo.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="submit" value="Realizar pedido">
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <section class="localizacion">
+            <section id="local-granada">
+                <h3>Granada</h3>
+                <div class="direccion-tienda">
+                    <span>Reyes Católicos, 55 (958000000)</span>
+                    <span>Avda. Dilar, 44 (958000000)</span>
+                </div>
+            </section>
+
+            <section id="local-malaga">
+                <h3>Málaga</h3>
+                <div class="direccion-tienda">
+                    <span>Marqués de Larios, 55 (958000000)</span>
+                    <span>Churriana, 22 (958000000)</span>
+                </div>
+            </section>
+        </section>
+
+        <section class="contacto">
+            <div class="email">
+                <img src="./img/email.png" alt="Email logo">
+                <span>info@lectordelibros.com</span>
+            </div>
+
+            <div class="redes">
+                <a href=""><img src="./img/twitter.png" alt="Twitter logo"></a>
+                <a href=""><img src="./img/linkedin.png" alt="Linkedin logo"></a>
+                <a href=""><img src="./img/facebook.png" alt="Facebook logo"></a>
+            </div>
+        </section>
+
+        <section class="otros-links">
+            <span><a href="./validar.php" target="_blank">La empresa</a></span>
+            <span><a href="./validar.php" target="_blank">Políticas de envío</a></span>
+            <span><a href="./validar.php" target="_blank">FaQ</a></span>
+            <span><a href="./validar.php" target="_blank">Mapa del sitio</a></span>
+        </section>
+    </footer>
+</body>
+</html>

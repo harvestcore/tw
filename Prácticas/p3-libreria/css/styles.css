@@ -1,0 +1,740 @@
+/* BODY */
+body {
+    /* gradiente de fondo */
+    background-image: linear-gradient(to bottom, #99B898, #F8B195, #FF847C, #E84A5F, #2A363B);
+    background-size: cover;
+    
+    /* fuente */
+    font-family: sans-serif;
+    font-size: 12px;
+    
+    /* padding del contenido */
+    padding-top: 5em;
+    padding-left: 7em;
+    padding-right: 7em;
+    padding-bottom: 1em;
+
+    /* quito margen */
+    margin: 0;
+}
+
+
+
+
+/* HEADER */
+#cabecera {
+    /* ancho y alto */
+    width: auto;
+    height: 12em;
+
+    /* color del fondo */
+    background-color: #F8B195;
+
+    /* flex */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-basis: content;
+    justify-content: center;
+    align-items: center;
+}
+
+/* imagen del libro de la cabecera */
+#libro-cabecera {
+    /* ancho y alto */
+    width: 8em;
+    height: 8em;
+}
+
+/* título de la cabecera */
+#cabecera-titulo {
+    /* color y fuente */
+    color: white;
+    font-family: 'Roboto';
+    
+    /* flex */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* título principal */
+#cabecera-titulo > h1 {
+    /* tamaño fuente */
+    font-size: 40px;
+
+    /* márgenes */
+    margin-bottom: 0;
+    margin-left: 5px;
+}
+
+/* subtítulo */
+#cabecera-titulo > h2 {
+    /* márgen */
+    margin-top: 0;
+
+    /* fuente */
+    font-size: 13px;
+    font-style: italic;
+}
+
+
+
+
+/* MENÚ SUPERIOR (Navegador)*/
+.top-menu {
+    /* fuente */
+    font-family: 'Nunito';
+    font-size: 15px;
+
+    /* padding */
+    padding-top: 10px;
+    padding-left: 1em;
+    padding-bottom: 10px;
+
+    /* ancho */
+    width: auto;
+
+    /* color fondo */
+    background-color: #F67280;
+}
+
+/* links normales y visitados */
+.top-menu > a:link, .top-menu > a:visited {
+    /* color */
+    color: white;
+
+    /* texto link */
+    text-align: center;
+    text-decoration: none;
+
+    /* padding */
+    padding: 10px 10px;
+
+    /* fuente */
+    font-weight: bold; 
+}
+
+/* hover links */
+.top-menu > a:hover {
+    /* color */
+    background-color: #f75363
+}
+
+
+
+
+/* CONTENEDOR PRINCIPAL */
+main {
+    /* color fondo */
+    background-color: #d397a8;
+
+    /* ancho */
+    width: auto;
+    
+    /* flex */
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    align-content: stretch;
+}
+
+
+
+
+/* MENÚ LATERAL */
+.side-menu {
+    /* fuente */
+    font-family: 'Noto Sans';
+    
+    /* ancho mínimo y máximo */
+    min-width: auto;
+    max-width: auto;
+    
+    /* color fondo */
+    background-color: #F67280;
+
+    /* orden en flex */
+    order: 2;
+
+    /* flex */
+    display: flex;
+    flex-direction: column;
+}
+
+/* secciones menú lateral */
+.side-menu section {
+    /* borde inferior */
+    border-bottom: 2px solid #2A363B;
+}
+
+/* sección más vendidos */
+.mas-vendidos {
+    /* borde inferior */
+    border-top: 2px solid #2A363B;
+}
+
+/* cabecera sección */
+.side-menu h3 {
+    color: white;
+    text-align: center;
+    font-family: 'Nunito';
+    font-size: 20px;
+}
+
+/* elementos lista de cada sección */
+.side-menu ul {
+    color: white;
+
+    /* imagen de cada elemento */
+    list-style-image: url("../img/right-arrow.png");
+    font-size: 14px;
+    padding-right: 0.5em;
+}
+
+/* links normales y visitados */
+.side-menu ul > li > a:link, .side-menu ul > li > a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+
+
+
+/* EVENTOS */
+.eventos {
+    /* orden flex y grow */
+    flex-grow: 1;
+    order: 1;
+
+    font-family: 'Noto Sans';
+    padding: 2em;
+
+    /* flex */
+    display: flex;
+    flex-direction: column;
+}
+
+/* cada section de los eventos */
+.eventos section {
+    align-content: stretch;
+}
+
+/* cabecera2 eventos (titulo principal: Eventos recientes) */
+.eventos > h2 {
+    font-family: 'Nunito';
+    font-size: 25px;
+    margin: 0;
+}
+
+/* cabecera3 eventos (titulo secundario: Firmas, Presentaciones...)*/
+.eventos h3 {
+    font-family: 'Nunito';
+    font-size: 20px;
+    padding-top: 1em;
+}
+
+/* cada evento en concreto */
+.evt {
+    background-color: #ffd8c8;
+    color: black;
+    
+    /* horizontal, vertical, blur, radio, color*/
+    box-shadow: 3px 3px 0px 0px #ffa581;
+
+    padding: 1em;
+
+    /* flex */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* imagen de los eventos */
+.evt > img {
+    height: 150px;
+    order: -1;
+}
+
+/* título principal evento */
+.evt h4 {
+    /* ocupo el 20% del contenedor donde se encuentra */
+    flex-basis: 20%;
+
+    padding: 1em;
+    font-size: 17px;
+
+    /* flex */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* datos de los eventos */
+.evt-data {
+    flex-grow: 1;
+    margin-right: 1em;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* fecha y hora de cada evento */
+.evt-data > .fecha, .evt-data > .hora {
+    font-weight: bold;
+    font-size: 13px;
+}
+
+/* descripcion (una frase) del evento */
+.evt-data > .descripcion {
+    text-align: center;
+    font-size: 17px;
+    order: -2;
+    padding: 1em;
+}
+
+/* botón/link más info */
+.link-info {
+    background: #ffa581;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 1em;
+    margin-top: 0.75em;
+}
+
+/* link normal, visitado y hover */
+.link-info a:visited, .link-info a:link, .link-info a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+
+
+
+/* FOOTER */
+footer {
+    /* posicion */
+    position: relative;
+
+    /* gradiente fondo */
+    background-image: linear-gradient(to bottom, #355C7D, rgba(53,92,125, 0));
+
+    /* color y fuente */
+    font-family: 'Noto Sans';
+    color: white;
+
+    /* ancho y alto */
+    width: 100%;
+    height: 8em;
+
+    /* flex */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    justify-content: space-around;
+}
+
+/* direccion tiendas */
+.localizacion {
+    /* flex */
+    display: flex;
+    flex-direction: column;
+}
+
+/* cada item direccion tiendas */
+.localizacion > section {
+    /* flex */
+    display: flex;
+    align-items: center;
+}
+
+/* localizacion tiendas titulo (nombre ciudad) */
+.localizacion > section > h3{
+    padding-right: 1em;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+/* localizacion tiendas direccion */
+.localizacion > section > .direccion-tienda{
+    font-size: 10px;
+}
+
+/* correo e iconos de redes */
+.contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* otros links, faq, empresa, política servicio... */
+.otros-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* links normales y visitados */
+.otros-links a:link, .otros-links a:visited {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+
+
+
+/* CATALOGO */
+.catalogo {
+    flex-grow: 1;
+    order: 1;
+    font-family: 'Noto Sans';
+
+    padding: 2em;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* cabecera catálogo */
+.catalogo > h2 {
+    font-family: 'Nunito';
+    font-size: 25px;
+    margin: 0;
+}
+
+/* segunda cabecera (nuevas adquisiciones, otros libros) */
+.catalogo h3 {
+    font-family: 'Nunito';
+    font-size: 20px;
+    padding-top: 1em;
+}
+
+/* cada sección + título */
+.catalogo section {
+    display: flex;
+    flex-direction: column;
+}
+
+/* libros de cada sección */
+.libros {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+/* cada libro */
+.libro {
+    background-color: #ffd8c8;
+    box-shadow: 3px 3px 0px 0px #ffa581;
+    color: black;
+    padding: 1em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* imagen libro */
+.libro > img {
+    width: 100px;
+}
+
+/* nombre libro */
+.libro > .nombre {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* precio libro */
+.libro > .precio {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* autor libro */
+.libro > .autor {
+    font-size: 11px;
+}
+
+/* botón compra */
+.btn-compra {
+    background: #ffa581;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 0.5em;
+    margin-top: 0.75em;
+}
+
+/* botón/link normal, visitado y hover */
+.btn-compra a:visited, .btn-compra a:link, .btn-compra a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+
+
+
+/* BÚSQUEDA */
+.search-form {
+    flex-grow: 1;
+    order: 1;
+    font-family: 'Noto Sans';
+
+    padding: 2em;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* cabecera */
+.search-form h2 {
+    font-family: 'Nunito';
+    font-size: 25px;
+    margin: 0;
+}
+
+/* formulario */
+.search-form > form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+/* PARÁMERTROS DE UN FORMULARIO */
+.f-param {
+    padding: 0.25em;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* parámetros de tipo texto, número, email, fecha y select */
+.f-param input[type=text], .f-param input[type=number], .f-param input[type=email], .f-param input[type=date], .f-param select {
+    width: auto;
+    padding: 3px 3px;
+    margin: 8px;
+    display: inline-block;
+    border: 1px solid #9d3dc4;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* parámetro de tipo número */
+.f-param input[type=number] {
+    width: 5em;
+}
+
+/* parámetro de tipo submit */
+input[type=submit] {
+    padding: 0.75em;
+    border: none;
+    cursor: pointer;
+    background: #ffa581;
+    border-radius: 5px;
+    margin: 2em;
+}
+
+/* etiquetas parámetros */
+.f-param > label {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+
+
+/* TIENDAS */
+.tiendas {
+    flex-grow: 1;
+    font-family: 'Noto Sans';
+    padding: 2em;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* cabecera */
+.tiendas > h2 {
+    font-family: 'Nunito';
+    font-size: 25px;
+    margin: 0;
+}
+
+/* imagenes tiendas */
+.tiendas img {
+    width: 100px;
+}
+
+/* tabla */
+.tiendas > table {
+    margin: 2em;
+    
+    /* sombra tabla */
+    box-shadow: 3px 3px 0px 0px #ffa581;
+}
+
+/* celdas */
+.tiendas > table td {
+    background: #ffd8c8;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* hover celdas */
+.tiendas > table td:hover {
+    background: #ffbba1;
+}
+
+
+
+
+/* PEDIDOS */
+.pedidos {
+    flex-grow: 1;
+
+    font-family: 'Noto Sans';
+    padding: 2em;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* cabecera pedidos */
+.pedidos > h2 {
+    font-family: 'Nunito';
+    font-size: 25px;
+    margin: 0;
+}
+
+/* libro pedido */
+.pedidos > .cabecera-libro-ped {
+    background: #ffd8c8;
+    box-shadow: 3px 3px 0px 0px #ffa581;
+
+    margin-bottom: 5em;
+    margin-top: 1em;
+    padding-bottom: 2em;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+/* imagen libro pedido */
+.pedidos > .cabecera-libro-ped img{
+    height: 300px;
+    align-self: center;
+}
+
+/* título libro pedido */
+.pedidos > .cabecera-libro-ped h3{
+    padding-left: 5em;
+    font-size: 20px;
+}
+
+/* items libro pedido */
+.pedidos > .cabecera-libro-ped > .items-ped{
+    margin-top: 3em;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+/* cada uno de los items del libro pedido */
+.pedidos > .cabecera-libro-ped > .items-ped > .single-item-ped {
+    margin: 3px;
+    
+    padding-left: 3em;
+    padding-right: 3em;
+    max-width: 700px;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+/* características del libro */
+.pedidos > .cabecera-libro-ped > .items-ped > .single-item-ped > .caract-libro {
+    font-size: 13px;
+    font-weight: bold;
+    /* padding-top: 0.25em; */
+    align-items: right;
+    /* text-align: left; */
+}
+
+/* formulario pedido */
+.pedidos > .form-pedido {
+    background: #ffd8c8;
+    box-shadow: 3px 3px 0px 0px #ffa581;
+    padding-top: 2em;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+
+/* checkboxes */
+.misc-ped {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+/* texto checkbox */
+.misc-ped > .misc-txt{
+    font-size: 13px;
+    text-align: center;
+}
+
+
+
+/* MEDIA */
+@media screen and (max-width: 800px) {
+
+    /* Ancho mínimo de la página */
+    body {
+        min-width: 575px;
+    }
+    
+    /* Ancho máximo de cada evento */
+    .eventos {
+        max-width: 400px;
+    }
+
+    /* Tamaño imagen evento */
+    .evt > img {
+        height: 95px;
+    }
+
+    /* tamaño texto evento */
+    .evt-data > .descripcion {
+        font-size: 14px;
+    }
+
+    /* tamaño nombres libros catálogo */
+    .libro > .nombre {
+        font-size: 12px;
+    }
+
+    /* tamaño texto catálogo */
+    .tiendas > table td {
+        font-size: 12px;
+    }
+}
