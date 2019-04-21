@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Twig demo</title>
+    </head>
+
+    <body>
+        {% set nombre='Ángel Gómez' %}
+        {# Esto es un comentario #}
+        <h1>Hola {{ nombre }}!</h1>
+
+        <br><br>
+
+        <h2>Vehículos</h2>
+        <h3>Coche 1: {{ car1.name }}</h3>
+        <h3>Coche 2: {{ car2.name }}</h3>
+        <h3>Coche 3: {{ car3.name }}</h3>
+
+        <br><br>
+
+        <h2>Aplicando filtros</h2>
+        <h3>Coche 1: {{ car1.name | striptags }}</h3>
+        <h3>Coche 2: {{ car2.name | title }}</h3>
+        <h3>Coche 3: {{ car3.name | upper }}</h3>
+
+        <br><br>
+
+        <h2>Listado de vehículos (JSON)</h2>
+        <h3>{{ cars | json_encode }}</h3>
+        
+        <br><br>
+
+        <h2>Listado de vehículos (Mal filtro) </h2>
+        {% for car in cars %}
+            {% filter title %}
+                <h3>{{ car.name | striptags }}</h3>
+                <li>{{ car.color }}</li>
+                <li>{{ car.id }}</li>
+            {% endfilter %}
+            <br>
+        {% endfor %}
+
+        <br><br>
+
+        <h2>Listado de vehículos</h2>
+        {% for car in cars %}
+            <li>{{ car.name | striptags | title }}</li>
+            <li>{{ car.color | title }}</li>
+            <li>{{ car.id }}</li>
+            <br>
+        {% endfor %}
+    
+    </body>
+</html>
