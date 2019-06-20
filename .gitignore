@@ -1,5 +1,12 @@
-.vagrant/
+*.py
+*.docm
+*.pdf
+foroquejas/
+*.zip
+config.php
+twig-*
+Test/
 mywebsql/
 private/
 protected/
-Test/
+.vagrant/
